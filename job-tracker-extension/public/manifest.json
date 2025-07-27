@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "AI Job Tracker (Vite)",
+  "version": "1.0.0",
+  "description": "Scrapes a job posting and adds it to Notion with one click.",
+  "action": {
+    "default_popup": "index.html"
+  },
+
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8000/*"]
+}

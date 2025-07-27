@@ -1,0 +1,38 @@
+# async def extract_job_data(html_content: str, url: str) -> JobData:
+#     """Use Crawl4AI to extract structured job data"""
+#     logger.info(f"Starting job extraction with Crawl4AI for: {url}")
+    
+#     SCHEMA = {
+#         "title": "Job title",
+#         "company": "Company name",
+#         "location": "Job location",
+#         "salary": "Salary range if mentioned",
+#         "job_type": "Full-time/Part-time/Contract",
+#         "experience_level": "Entry/Mid/Senior/Executive",
+#         "description": "Brief job description",
+#         "requirements": "List of key requirements",
+#         "benefits": "List of benefits",
+#     }
+
+#     try:
+#         strategy = LLMExtractionStrategy(schema=SCHEMA)
+
+#         async with AsyncWebCrawler() as crawler:
+#             result = await crawler.arun(url=url, strategies=[strategy])
+#             print(result[:100])
+
+#         # if not result or not result.data:
+#         #     raise RuntimeError("Crawl4AI failed to extract job data.")
+        
+#         # print("_"*50,)
+#         # print(result)
+#         # print("_"*50)
+#         pprint.pprint(result.model_dump())
+#         job_info = result.model_dump()
+#         job_info["url"] = url
+#         job_info["scraped_at"] = datetime.now()
+#         return JobData(**job_info)
+
+#     except Exception as e:
+#         logger.exception("Crawl4AI extraction failed")
+#         raise RuntimeError("Crawl4AI failed to extract job data.")

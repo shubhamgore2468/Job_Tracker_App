@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]==0.32.1
+python-dotenv
+notion-client
+openai
+playwright
+beautifulsoup4
+httpx
+pydantic
+python-multipart
