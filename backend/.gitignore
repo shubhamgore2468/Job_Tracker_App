@@ -1,4 +1,8 @@
 venv/
-.envz̄
+.env
 
 __pycache__/
+
+test.json
+
+test.txt
